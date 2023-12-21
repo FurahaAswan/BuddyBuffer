@@ -1,0 +1,203 @@
+Furaha Aswan, 5.11.2023, Assignment 7 
+
+Initializing Buffers
+Expected values: 10 512 size buffers, Status Ok 
+
+Free Buffer Count: 
+10 511 size buffers
+0 255 size buffers
+0 127 size buffers
+0 63 size buffers
+0 31 size buffers
+0 15 size buffers
+0 7 size buffers
+
+Status: 
+
+OK 
+
+
+Requesting 700
+Expected values: 
+Assigned address: -2
+
+Actual = Assigned Address: -2 
+
+Request buffer size 7
+Expected values: 
+9 511 size buffers, 1 255 size buffer, 1 127 size buffer,
+1 63 size buffer, 1 31 size buffer, and 1 7 size buffer, Status Ok
+
+Actual = Assigned Address: 0 
+
+Free Buffer Count: 
+9 511 size buffers
+1 255 size buffers
+1 127 size buffers
+1 63 size buffers
+1 31 size buffers
+1 15 size buffers
+1 7 size buffers
+
+Status: 
+
+OK 
+
+
+Return buffer size 7
+Expected values: 
+10 511 size buffers, Status Ok
+
+Actual = 
+
+Free Buffer Count: 
+10 511 size buffers
+0 255 size buffers
+0 127 size buffers
+0 63 size buffers
+0 31 size buffers
+0 15 size buffers
+0 7 size buffers
+
+Status: 
+
+OK 
+
+
+Request 10 Buffers
+Expected values: 
+0 511 buffers, 0 for all buffers, Status Tight
+
+Actual = Assigned Address: 0 
+
+Actual = Assigned Address: 512 
+
+Actual = Assigned Address: 1024 
+
+Actual = Assigned Address: 1536 
+
+Actual = Assigned Address: 2048 
+
+Actual = Assigned Address: 2560 
+
+Actual = Assigned Address: 3072 
+
+Actual = Assigned Address: 3584 
+
+Actual = Assigned Address: 4096 
+
+Actual = Assigned Address: 4608 
+
+Free Buffer Count: 
+0 511 size buffers
+0 255 size buffers
+0 127 size buffers
+0 63 size buffers
+0 31 size buffers
+0 15 size buffers
+0 7 size buffers
+
+Status: 
+
+Tight 
+
+
+Request buffer size 479
+Expected values: 
+Assigned address = -1
+0 511 buffers, 0 for all buffers, Status Tight
+
+Actual = Assigned Address: -1 
+
+Free Buffer Count: 
+0 511 size buffers
+0 255 size buffers
+0 127 size buffers
+0 63 size buffers
+0 31 size buffers
+0 15 size buffers
+0 7 size buffers
+
+Status: 
+
+Tight 
+
+
+Return 10 buffers size 511
+Expected values: 
+10 511 buffers, Status Ok
+
+Free Buffer Count: 
+10 511 size buffers
+0 255 size buffers
+0 127 size buffers
+0 63 size buffers
+0 31 size buffers
+0 15 size buffers
+0 7 size buffers
+
+Status: 
+
+OK 
+
+
+====================================================================================
+Additional Tesing
+====================================================================================
+
+The following is testing the deallocate merge from the right buffer:
+
+Request 2 buffers size 7
+Expected values: 
+9 511 buffers, 1 of each except 7, 0 7 buffers, Status OK
+
+Free Buffer Count: 
+9 511 size buffers
+1 255 size buffers
+1 127 size buffers
+1 63 size buffers
+1 31 size buffers
+1 15 size buffers
+0 7 size buffers
+
+Status: 
+
+OK 
+
+
+Returning buffer size 7
+Expected values: 
+9 511 buffers, 1 of each, Status OK
+
+Free Buffer Count: 
+9 511 size buffers
+1 255 size buffers
+1 127 size buffers
+1 63 size buffers
+1 31 size buffers
+1 15 size buffers
+1 7 size buffers
+
+Status: 
+
+OK 
+
+
+Returning buffer size 7
+Expected values: 
+10 511 buffers, Status Ok
+
+Free Buffer Count: 
+10 511 size buffers
+0 255 size buffers
+0 127 size buffers
+0 63 size buffers
+0 31 size buffers
+0 15 size buffers
+0 7 size buffers
+
+Status: 
+
+OK 
+
+
